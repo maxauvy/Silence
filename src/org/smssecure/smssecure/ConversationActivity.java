@@ -956,10 +956,10 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         @Override public void onKeyEvent(KeyEvent keyEvent) {
           composeText.dispatchKeyEvent(keyEvent);
         }
-      }
 
-      @Override public void onEmojiSelected(String emoji) {
-        composeText.insertEmoji(emoji);
+        @Override public void onEmojiSelected(String emoji) {
+          composeText.insertEmoji(emoji);
+        }
       });
     }
 
