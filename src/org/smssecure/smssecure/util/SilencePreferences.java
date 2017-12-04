@@ -95,13 +95,15 @@ public class SilencePreferences {
   private static final String MEDIA_DOWNLOAD_PREF              = "pref_media_download";
   private static final String MEDIA_DOWNLOAD_ROAMING_PREF      = "pref_media_download_roaming";
 
+  public  static final String SYSTEM_EMOJI_PREF                = "pref_system_emoji";
+
+  public  static final String INCOGNITO_KEYBORAD_PREF          = "pref_incognito_keyboard";
+
   private static final String APP_SUBSCRIPTION_ID_FOR_DEVICE_SUBSCRIPTION_ID_PREF = "app_subscription_id_for_device_subscription_id";
   private static final String LAST_APP_SUBSCRIPTION_ID_PREF                       = "last_app_subscription_id";
   private static final String NUMBER_FOR_APP_SUBSCRIPTION_ID_PREF                 = "number_for_app_subscription_id";
   private static final String ICC_ID_FOR_APP_SUBSCRIPTION_ID_PREF                 = "icc_id_for_app_subscription_id";
   private static final String SUBSCRIPTIONS_PREF                                  = "pref_subscriptions";
-
-  public  static final String INCOGNITO_KEYBORAD_PREF          = "pref_incognito_keyboard";
 
   public static boolean isIncognitoKeyboardEnabled(Context context) {
     return getBooleanPreference(context, INCOGNITO_KEYBORAD_PREF, true);
@@ -528,6 +530,10 @@ public class SilencePreferences {
 
   public static int getThreadTrimLength(Context context) {
     return Integer.parseInt(getStringPreference(context, THREAD_TRIM_LENGTH, "500"));
+  }
+
+  public static boolean isSystemEmojiPreferred(Context context) {
+    return getBooleanPreference(context, SYSTEM_EMOJI_PREF, false);
   }
 
   public static boolean isMediaDownloadAllowed(Context context) {
